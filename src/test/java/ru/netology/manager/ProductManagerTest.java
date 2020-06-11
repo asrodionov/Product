@@ -139,7 +139,7 @@ public class ProductManagerTest {
         Product[] returned = new Product[]{first, second, third, fourth,fifth, sixth, seventh};
         doReturn(returned).when(repository).findAll();
 
-        Product[] expected = new Product[]{};
+        Product[] expected = new Product[]{seventh};
         Product[] actual = manager.searchBy("Huawei P20");
 
         assertArrayEquals(expected, actual);
